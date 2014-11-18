@@ -232,7 +232,11 @@ namespace Task {
 	//Remove and delete edge
 	template <class NodeT, class EdgeT> void Graph<NodeT, EdgeT>::remove(EdgeT& edge)
 	{
-
+		/*if(edgeList.size())
+		{
+			throw Error("Error in remove(edge) function");
+		};
+*/
 		edge.predNode.succEdgeIter.erase(edge.predIter);
 		edge.succNode.predEdgeIter.erase(edge.succIter);
 
